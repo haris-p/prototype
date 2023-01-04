@@ -1,0 +1,173 @@
+<%- include("../includes/head.ejs")  %> 
+</head>
+    <body>
+        <%- include("../includes/navigation.ejs") %> 
+        <main class="bg-slate">
+          <!-- SLIDE SHOW -->
+          <div id="carouselExampleIndicators" class="carousel slide relative" data-bs-ride="carousel">
+                <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner relative w-full overflow-hidden">
+                  <div class="carousel-item active float-left w-full">
+                    <a href="/products">
+                      <img
+                        src="img/outfit.png"
+                        class="block w-full h-95"
+                        alt="Wild Landscape"
+                      />
+                    </a>
+                  </div>
+                  <div class="carousel-item float-left w-full">
+                    <a href="/products">
+                      <img
+                        src="img/outfit-2.png"
+                        class="block w-full"
+                        alt="Camera"
+                      />
+                    </a>
+                  </div>
+                  <div class="carousel-item float-left w-full">
+                    <a href="/products">
+                      <img
+                        src="img/outfit-3.png"
+                        class="block w-full"
+                        alt="Exotic Fruits"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+          </div>
+          <!-- FLASH SALE -->
+          <div class="flex justify-center mt-12 mb-5 text-3xl font-medium">
+            <h1 class="p-1">Diskon Kilat</h1>
+          </div>
+          <% if (prods.length > 0) { %>
+            <div class="flex gap-5 sm:mx-28 lg:mx-96 justify-center flex-wrap p-7">
+                    <% for (let product of prods) { %>
+                        <div class="w-full w-56 bg-slate">
+                            <a href="/product-detail/<%= product.id %> ">
+                                <img class=" rounded-t-lg" src= <%= product.imageUrl %>  alt="product image" />
+                            </a>
+                            <div class="px-5 pb-5">
+                                <a href="#">
+                                    <h5 class="text-xl text-center font-bold tracking-tight text-gray-900 dark:text-white pt-2"> <%= product.productName %>  </h5>
+                                </a>
+                                <div class="flex items-center justify-center">
+                                    <span class="text-center text-xl font-semibold text-red-500 dark:text-white">Rp. <%= new Intl.NumberFormat(['id']).format(product.price) %>  </span>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+            </div>
+
+            <!-- COLLECTION -->
+            <div class="flex justify-center mt-12 mb-5 text-3xl font-medium">
+              <h1 class="p-1">Our Collections</h1>
+            </div>
+            <div class="container flex flex-wrap mx-auto">
+              <div class="w-full p-2 rounded lg:w-1/3 md:w-1/2">
+                <a href="">
+                  <img src="img/women.png"
+                      alt="image">
+                </a>
+              </div>
+              <div class="w-full p-2 rounded lg:w-1/3 md:w-1/2">
+                <a href="">
+                  <img src="img/hris.png"
+                      alt="image">
+                </a>
+              </div>
+              <div class="w-full p-2 rounded lg:w-1/3 md:w-1/2">
+                <a href="">
+                  <img src="img/akrm.png"
+                      alt="image">
+                </a>
+              </div>
+              <div class="w-full p-2 rounded lg:w-1/3 md:w-1/2">
+                <a href="">
+                  <img src="img/men.png"
+                      alt="image">
+                </a>
+              </div>
+              <div class="w-full p-2 rounded lg:w-1/3 md:w-1/2">
+                <a href="">
+                  <img src="img/alvn.png"
+                      alt="image"
+                      attribute="https://unsplash.com/photos/ycVFts5Ma4s?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink">
+                </a>
+              </div>
+              <div class="w-full p-2 rounded lg:w-1/3 md:w-1/2">
+                <a href="">
+                  <img src="img/yism.png"
+                      alt="image"
+                      attribute="https://unsplash.com/photos/TS--uNw-JqE?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink">
+                </a>
+              </div>
+            </div>
+
+            <!-- BEST SELLER -->
+            <div class="flex justify-center mt-12 mb-5 text-3xl font-medium">
+              <h1 class="p-1">Best Seller</h1>
+            </div>
+            <div class="flex gap-5 sm:mx-28 lg:mx-96 justify-center flex-wrap p-7">
+              <% for (let product of prods) { %>
+                  <div class="w-full w-56 bg-slate">
+                      <a href="/product-detail/<%= product.id %> ">
+                          <img class=" rounded-t-lg" src= <%= product.imageUrl %>  alt="product image" />
+                      </a>
+                      <div class="px-5 pb-5">
+                          <a href="#">
+                              <h5 class="text-xl text-center font-bold tracking-tight text-gray-900 dark:text-white pt-2"> <%= product.productName %>  </h5>
+                          </a>
+                          <div class="flex items-center justify-center">
+                              <span class="text-center text-xl font-semibold text-red-500 dark:text-white">Rp. <%= new Intl.NumberFormat(['id']).format(product.price) %>  </span>
+                          </div>
+                      </div>
+                  </div>
+              <% } %>
+            </div>
+            <% } else { %>
+                <h1>Product not found</h1>
+            <% } %>
+            <%- include("../includes/footer.ejs") %> 
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <%- include("../includes/end.ejs")  %> 
