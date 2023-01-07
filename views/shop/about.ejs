@@ -1,0 +1,77 @@
+<%- include("../includes/head.ejs")  %> 
+</head>
+<body>
+    <main class="bg-slate">
+        <%- include("../includes/navigation.ejs") %>
+            <h1 class="text-center text-4xl my-8">Tentang Kami</h1>
+            <!-- Profil perusahaan -->
+            <section class="flex flex-col lg:flex-row p-8 bg-sky-500 text-slate-50 lg:h-max xl:h-80">
+                <img src="img/logo.svg" alt="" class="h-auto max-w-xs w-2/5 ml-24 mr-16 mb-8 place-self-center">
+                <p class="my-8 xl:w-3/5 xl:mt-1 text-lg xl:self-center">EIGER Adventure merupakan produk asli Indonesia yang berkualitas, pertama
+                    kali berdiri pada tahun 1989 sebagai produk yang memenuhi berbagai 
+                    kebutuhan perlengkapan dan peralatan bagi gaya hidup para penggiat alam
+                    terbuka di iklim tropis. EIGER menyediakan tiga kategori produk utama, yaitu
+                    Mountaineering yang berorientasi pada kegiatan pendakian gunung, Riding 
+                    yang berfokus pada penjelajahan sepeda motor, serta Authentic 1989 yang 
+                    diinspirasi dari gaya klasik para pencinta kegiatan petualangan alam terbuka
+                    yang diwujudkan dalam desain yang kasual dan stylish.</p>
+            </section>
+
+            <!-- Statistik penjualan -->
+            <h1 class="text-center text-4xl my-8">Statistik Produk</h1>
+            <section class="p-16 flex flex-wrap gap-12 justify-center">
+                <div class="flex gap-4 w-96">
+                    <img class="drop-shadow-2xl" src="img/pants-stats.svg" alt="">
+                    <div class="mt-6">
+                        <p class="text-sky-500 text-2xl font-semibold">Celana Pendek</p>
+                        <p class="text-xl text-gray-500 font-medium">3 Jenis</p>
+                    </div>
+                </div>
+                <!-- Kemeja -->
+                <div class="flex gap-4 w-96">
+                    <img class="drop-shadow-2xl" src="img/t-shirts-ss-stats.svg" alt="">
+                    <div class="mt-6">
+                        <p class="text-sky-500 text-2xl font-semibold">Kemeja</p>
+                        <p class="text-xl text-gray-500 font-medium">4 Jenis</p>
+                    </div>
+                </div>
+                <!-- Topi -->
+                <div class="flex gap-4 w-96">
+                    <img class="drop-shadow-2xl" src="img/caps-stats.svg" alt="">
+                    <div class="mt-6">
+                        <p class="text-sky-500 text-2xl font-semibold">Topi</p>
+                        <p class="text-xl text-gray-500 font-medium">6 Jenis</p>
+                    </div>
+                </div>
+            </section>
+            <section class="p-16 flex flex-wrap gap-12 justify-center">
+                <div class="flex gap-4 w-96">
+                    <img class="drop-shadow-2xl" src="img/long-pants-stats.svg" alt="">
+                    <div class="mt-6">
+                        <p class="text-sky-500 text-2xl font-semibold">Celana Panjang</p>
+                        <p class="text-xl text-gray-500 font-medium">2 Jenis</p>
+                    </div>
+                </div>
+                <!-- Kaos lengan pendek -->
+                <div class="flex gap-4 w-96">
+                    <img class="drop-shadow-2xl" src="img/shirt-stats.svg" alt="">
+                    <div class="mt-6">
+                        <p class="text-sky-500 text-2xl font-semibold">Kaos Lengan Pendek</p>
+                        <p class="text-xl text-gray-500 font-medium">10 Jenis</p>
+                    </div>
+                </div>
+                <!-- kaos lengan panjang -->
+                <div class="flex gap-4 w-96">
+                    <img class="drop-shadow-2xl" src="img/t-shirts-ls-stats.svg" alt="">
+                    <div class="mt-6">
+                        <p class="text-sky-500 text-2xl font-semibold">Kaos Lengan Panjang</p>
+                        <p class="text-xl text-gray-500 font-medium">9 Jenis</p>
+                    </div>
+                </div>
+            </section>
+                
+        <%- include ("../includes/footer.ejs") %> 
+    </main>
+
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <%- include("../includes/end.ejs")  %> 
