@@ -53,3 +53,14 @@ exports.getCart = (req, res, next) => {
         });
     })
 }
+
+exports.getAboutUs = (req, res, next) => {
+    Product.findAll()
+    .then(product => {
+        res.render('shop/about.ejs', {
+            product: product,
+            pageTitle: "About Us",
+            path: '/about-us'
+        });
+    });
+}
