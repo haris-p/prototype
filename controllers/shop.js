@@ -64,3 +64,14 @@ exports.getAboutUs = (req, res, next) => {
         });
     });
 }
+
+exports.getSignIn = (req,res, next) => {
+    Product.findAll()
+    .then(product => {
+        res.render('shop/sign-in.ejs', {
+            product: product,
+            pageTitle: "Sign In",
+            path: '/sign-in'
+        });
+    });
+}
