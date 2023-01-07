@@ -75,3 +75,14 @@ exports.getSignIn = (req,res, next) => {
         });
     });
 }
+
+exports.getSignUp = (req, res, next) => {
+    Product.findAll()
+    .then(product => {
+        res.render('shop/sign-up', {
+            product: product,
+            pageTitle: 'Sign Up',
+            path: '/sign-up'
+        });
+    });
+}

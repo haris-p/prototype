@@ -12,5 +12,6 @@ router.get('/products', shopController.getProductsList);
 router.get('/product-detail/:productId', shopController.getProductDetail);
 router.get('/about-us', shopController.getAboutUs);
 router.get('/sign-in', shopController.getSignIn);
+router.get('/sign-up', shopController.getSignUp);
 
 module.exports = router;
