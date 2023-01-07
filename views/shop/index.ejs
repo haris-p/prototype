@@ -97,10 +97,77 @@
                         </div>
                     <% } %>
             </div>
-                
+
+            <!-- COLLECTION -->
+            <div class="flex justify-center mt-12 mb-5 text-3xl font-medium">
+              <h1 class="p-1">Our Collections</h1>
+            </div>
+            <div class="container flex flex-wrap mx-auto">
+              <div class="w-full p-2 rounded lg:w-1/3 md:w-1/2">
+                <a href="">
+                  <img src="img/women.png"
+                      alt="image">
+                </a>
+              </div>
+              <div class="w-full p-2 rounded lg:w-1/3 md:w-1/2">
+                <a href="">
+                  <img src="img/hris.png"
+                      alt="image">
+                </a>
+              </div>
+              <div class="w-full p-2 rounded lg:w-1/3 md:w-1/2">
+                <a href="">
+                  <img src="img/akrm.png"
+                      alt="image">
+                </a>
+              </div>
+              <div class="w-full p-2 rounded lg:w-1/3 md:w-1/2">
+                <a href="">
+                  <img src="img/men.png"
+                      alt="image">
+                </a>
+              </div>
+              <div class="w-full p-2 rounded lg:w-1/3 md:w-1/2">
+                <a href="">
+                  <img src="img/alvn.png"
+                      alt="image"
+                      attribute="https://unsplash.com/photos/ycVFts5Ma4s?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink">
+                </a>
+              </div>
+              <div class="w-full p-2 rounded lg:w-1/3 md:w-1/2">
+                <a href="">
+                  <img src="img/yism.png"
+                      alt="image"
+                      attribute="https://unsplash.com/photos/TS--uNw-JqE?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink">
+                </a>
+              </div>
+            </div>
+
+            <!-- BEST SELLER -->
+            <div class="flex justify-center mt-12 mb-5 text-3xl font-medium">
+              <h1 class="p-1">Best Seller</h1>
+            </div>
+            <div class="flex gap-5 sm:mx-28 lg:mx-96 justify-center flex-wrap p-7">
+              <% for (let product of prods) { %>
+                  <div class="w-full w-56 bg-slate">
+                      <a href="/product-detail/<%= product.id %> ">
+                          <img class=" rounded-t-lg" src= <%= product.imageUrl %>  alt="product image" />
+                      </a>
+                      <div class="px-5 pb-5">
+                          <a href="#">
+                              <h5 class="text-xl text-center font-bold tracking-tight text-gray-900 dark:text-white pt-2"> <%= product.productName %>  </h5>
+                          </a>
+                          <div class="flex items-center justify-center">
+                              <span class="text-center text-xl font-semibold text-red-500 dark:text-white">Rp. <%= new Intl.NumberFormat(['id']).format(product.price) %>  </span>
+                          </div>
+                      </div>
+                  </div>
+              <% } %>
+            </div>
             <% } else { %>
                 <h1>Product not found</h1>
             <% } %>
+            <%- include("../includes/footer.ejs") %> 
         </main>
         <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
     <%- include("../includes/end.ejs")  %> 
